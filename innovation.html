@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      * { padding: 0; margin:0; box-sizing:border-box;}
+      :root {
+	  font-family: sans-serif;
+      }
+      .card {
+	  display: inline-block;
+	  width: 17%;
+	  padding: 0 2em 0 1em;
+	  border: 1px solid black;
+	  position: relative;
+	  margin: 1%;
+      }
+      .card::after {
+	  position: absolute;
+	  top:0;right:0;
+	  background-color: black;
+	  color:white; font-weight: bold;
+	  display: block; width:1.5em; text-align: right;
+	  padding: 0.25em 0.5em;
+      }
+
+
+      .card.red {
+	  background-color: #ffaaaa;
+      }
+      .card.blue {
+	  background-color: #88baef;
+      }
+      .card.green {
+	  background-color: #adf864;
+      }
+      .card.yellow {
+	  background-color: #f1e15f;
+      }
+      .card.purple {
+	  background-color: #ad7fa8;
+      }
+      
+      .card.age1::after { content: "1"; }
+      .card.age2::after { content: "2"; }
+      .card.age3::after { content: "3"; }
+      .card.age4::after { content: "4"; }
+      .card.age5::after { content: "5"; }
+      .card.age6::after { content: "6"; }
+      .card.age7::after { content: "7"; }
+      .card.age8::after { content: "8"; }
+      .card.age9::after { content: "9"; }
+      .card.age10::after { content: "10"; }
+
+      .dogmas {
+	  background-color: rgba(255,255,255,0.6);
+	  padding: 0.25em 0.25em 0.25em 1em;
+	  list-items: none;
+      }
+      .dogmas::before {
+	  position:relative; left:-1em;
+	  font-family: monospace;
+	  color: white; background-color: black;
+	  width:1em; display:block;
+      }
+      .dogmas.castle  { list-style-type: "\265C"; }
+      .dogmas.crown   { list-style-type: "\265B"; }
+      .dogmas.leaf    { list-style-type: "\1f342"; }
+      .dogmas.bulb    { list-style-type: "\1f4a1"; }
+      .dogmas.factory { list-style-type: "\1f3ed"; }
+      .dogmas.clock   { list-style-type: "\23f2"; }
+
+      .icons li { float:left; width: 1em; }
+      .icons .castle  { list-style-type: "\265C"; }
+      .icons .crown   { list-style-type: "\265B"; }
+      .icons .leaf    { list-style-type: "\1f342"; }
+      .icons .bulb    { list-style-type: "\1f4a1"; }
+      .icons .factory { list-style-type: "\1f3ed"; }
+      .icons .clock   { list-style-type: "\23f2"; }
+      .icons .icon   { list-style-type: "#"; }
+
+      .icons::after { clear:both; content:""; display:block;}
+      
+      
+
+      .dogmas .demand::before {
+	  content: "I demand ";
+      }
+      .dogmas .compel::before {
+	  content: "I compel ";
+      }
+      .dogmas li::before {
+	  font-weight: bold;
+	  text-transform: uppercase;
+      }
+      
+    </style>
+  </head>
+  <body id="body">
+
+    <article>
+      <h1>Innovation - Artifacts of History</h1>
+      <section>
+	<h2>Age 1</h2>
+
+	<div class="card age1 purple">
+	  <h3>Ark of the Covenant</h3>
+	  <ol class="icons">
+	    <li class="icon"></li>
+	    <li class="castle"></li>
+	    <li class="castle"></li>
+	    <li class="castle"></li>
+	  </ol>
+	  <ol class="dogmas castle">
+	    <li>
+	      Return a card from your hand. Transfer all cards of the
+	      same color from the boards of all players with no top
+	      Artifacts to your score pile. If Ark of the Covenant is
+	      a top card on any board, transfer it to your hand.
+	    </li>
+	  </ol>
+	</div>
+
+	<div class="card age1 blue">
+	  <h3>Basur Hoyuk Tokens</h3>
+	  <ol class="icons">
+	    <li class="crown"></li>
+	    <li class="icon"></li>
+	    <li class="leaf"></li>
+	    <li class="leaf"></li>
+	  </ol>
+	  <ol class="dogmas leaf">
+	    <li>
+	      Draw and reveal a 4. If you have a top card of the drawn
+	      card's color that comes before it in the alphabet,
+	      return the drawn card and all cards from your score
+	      pile.
+	    </li>
+	  </ol>
+	</div>
+
+	<div class="card age1 yellow">
+	  <h3>Lurgan Canoe</h3>
+	  <ol class="icons">
+	    <li class="icon"></li>
+	    <li class="crown"></li>
+	    <li class="crown"></li>
+	    <li class="crown"></li>
+	  </ol>
+	  <ol class="dogmas crown">
+	    <li>
+	      Meld a card from your hand. Score all other cards of the
+	      same color from your board. If you scored at least one
+	      card, repeat this effect.
+	    </li>
+	  </ol>
+	</div>
+
+	<div class="card age1 red">
+	  <h3>Papyrus of Ani</h3>
+	  <ol class="icons">
+	    <li class="leaf"></li>
+	    <li class="leaf"></li>
+	    <li class="leaf"></li>
+	    <li class="icon"></li>
+	  </ol>
+	  <ol class="dogmas leaf">
+	    <li>
+	      Return a purple card from your hand. If you do, draw
+	      and reveal a card of any type of value two higher. If
+	      the drawn card is purple, meld it and execute each of
+	      its non-demand effects. Do not share them.
+	    </li>
+	  </ol>
+	</div>
+
+	<div class="card age1 purple">
+	  <h3>Jiskairumoko Necklace</h3>
+	  <ol class="icons">
+	    <li class="icon"></li>
+	    <li class="crown"></li>
+	    <li class="castle"></li>
+	    <li class="castle"></li>
+	  </ol>
+	  <ol class="dogmas castle">
+	    <li class="compel">
+	      you to return a card from your score pile! If you do,
+	      transfer an achievement of the same value from your
+	      achievements to mine!
+	    </li>
+	  </ol>
+	</div>
+
+	<div class="card age1 blue">
+	  <h3>Treaty of Kadesh</h3>
+	  <ol class="icons">
+	    <li class="crown"></li>
+	    <li class="castle"></li>
+	    <li class="icon"></li>
+	    <li class="castle"></li>
+	  </ol>
+	  <ol class="dogmas castle">
+	    <li class="compel">
+	      you to return all top cards with a demand effect from your board!
+	    </li>
+	    <li>
+	      Score a top, non-blue card with a demand effect from your board.
+	    </li>
+	  </ol>
+	</div>
+
+	<div class="card age1 green">
+	  <h3>Priest-King</h3>
+	  <ol class="icons">
+	    <li class="castle"></li>
+	    <li class="icon"></li>
+	    <li class="castle"></li>
+	    <li class="castle"></li>
+	  </ol>
+	  <ol class="dogmas castle">
+	    <li>
+	      Score a card from your hand. If you have a top card
+	      matching its color, execute each of the top card's
+	      non-demand dogma effects. Do not share them.
+	    </li>
+	    <li>
+	      Claim an achievement, if eligible.
+	    </li>
+	  </ol>
+	</div>
+
+	<div class="card age1 red">
+	  <h3>Pavlovian Tusk</h3>
+	  <ol class="icons">
+	    <li class="icon"></li>
+	    <li class="crown"></li>
+	    <li class="castle"></li>
+	    <li class="crown"></li>
+	  </ol>
+	  <ol class="dogmas castle">
+	    <li>
+	      Draw three cards of value equal to your top green card. Return one, score one, keep one.
+	    </li>
+	  </ol>
+	</div>
+
+	<div class="card age1 yellow">
+	  <h3>Dancing Girl</h3>
+	  <ol class="icons">
+	    <li class="icon"></li>
+	    <li class="bulb"></li>
+	    <li class="bulb"></li>
+	    <li class="bulb"></li>
+	  </ol>
+	  <ol class="dogmas bulb">
+	    <li class="compel">
+	      you to transfer Dancing Girl to your board!
+	    </li>
+	    <li class="">
+	      If Dancing Girl has been on every board during this
+	      action, and it started on your board, you win.
+	    </li>
+	  </ol>
+	</div>
+
+	<div class="card age1 purple">
+	  <h3>Tale of the Shipwrecked Sailor</h3>
+	  <ol class="icons">
+	    <li class="icon"></li>
+	    <li class="castle"></li>
+	    <li class="bulb"></li>
+	    <li class="bulb"></li>
+	  </ol>
+	  <ol class="dogmas bulb">
+	    <li class="">
+	      Choose a color. Draw a 1. Meld a card of the chosen
+	      color from your hand. If you do, splay that color left.
+	    </li>
+	  </ol>
+	</div>
+
+	<div class="card age1 red">
+	  <h3>Holemgard Bows</h3>
+	  <ol class="icons">
+	    <li class="castle"></li>
+	    <li class="leaf"></li>
+	    <li class="icon"></li>
+	    <li class="leaf"></li>
+	  </ol>
+	  <ol class="dogmas leaf">
+	    <li class="compel">
+	      you to transfer the highest top card with a CASTLE on your board to my hand!
+	    </li>
+	    <li>Draw a 2.</li>
+	  </ol>
+	</div>
+	
+	<div class="card age1 yellow">
+	  <h3>Xianrendong Shards</h3>
+	  <ol class="icons">
+	    <li class="icon"></li>
+	    <li class="leaf"></li>
+	    <li class="leaf"></li>
+	    <li class="leaf"></li>
+	  </ol>
+	  <ol class="dogmas leaf">
+	    <li class="">
+	      Reveal three cards from your hand. Score two, then tuck
+	      the other. If the scored cards were the same color, draw
+	      three 1s.
+	    </li>
+	  </ol>
+	</div>
+	
+	<div class="card age1 green">
+	  <h3>Electrum Stater of Efesos</h3>
+	  <ol class="icons">
+	    <li class="crown"></li>
+	    <li class="icon"></li>
+	    <li class="castle"></li>
+	    <li class="crown"></li>
+	  </ol>
+	  <ol class="dogmas crown">
+	    <li class="">
+	      Draw and reveal a 3. If you do not have a top card of
+	      the drawn card's color, meld it and repeat this effect.
+	    </li>
+	  </ol>
+	</div>
+
+	<div class="card age1 blue">
+	  <h3>Sibidu Needle</h3>
+	  <ol class="icons">
+	    <li class="castle"></li>
+	    <li class="castle"></li>
+	    <li class="castle"></li>
+	    <li class="icon"></li>
+	  </ol>
+	  <ol class="dogmas castle">
+	    <li class="">
+	      Draw and reveal a 1. If you have a top card of matching
+	      color and value to the drawn card, score the drawn card
+	      and repeat this effect.
+	    </li>
+	  </ol>
+	</div>
+
+	<div class="card age1 purple">
+	  <h3>Mask of Warka</h3>
+	  <ol class="icons">
+	    <li class="castle"></li>
+	    <li class="castle"></li>
+	    <li class="icon"></li>
+	    <li class="castle"></li>
+	  </ol>
+	  <ol class="dogmas castle">
+	    <li class="">
+	      Choose a color. Each player reveals all cards of that
+	      color from their hand. If you are the only player to
+	      reveal cards, return them and claim all achievements of
+	      value matching those cards, ignoring eligibility.
+	    </li>
+	  </ol>
+	</div>
+	
+      </section>
+    </article>
+    
+  </body>
+</html>
